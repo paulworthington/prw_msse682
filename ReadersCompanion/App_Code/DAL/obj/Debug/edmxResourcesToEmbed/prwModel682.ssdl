@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="readerDB01Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="readerDB01ModelStoreContainer">
+    <EntitySet Name="Book" EntityType="readerDB01Model.Store.Book" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Item" EntityType="readerDB01Model.Store.Item" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemDescription" EntityType="readerDB01Model.Store.ItemDescription" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ItemType" EntityType="readerDB01Model.Store.ItemType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SpoilerFilter" EntityType="readerDB01Model.Store.SpoilerFilter" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="readerDB01Model.Store.User" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_ItemDescription_Item" Association="readerDB01Model.Store.FK_ItemDescription_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="ItemDescription" EntitySet="ItemDescription" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="bookID" />
+    </Key>
+    <Property Name="bookID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="bookNumber" Type="int" />
+    <Property Name="bookTitle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="itemName" Type="varchar" MaxLength="50" />
+    <Property Name="itemType" Type="varchar" MaxLength="50" />
+    <Property Name="firstMentionBook" Type="int" />
+    <Property Name="firstMentionChapter" Type="int" />
+    <Property Name="eventDate" Type="int" />
+  </EntityType>
+  <EntityType Name="ItemDescription">
+    <Key>
+      <PropertyRef Name="itemDescID" />
+    </Key>
+    <Property Name="itemDescID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="itemID" Type="int" />
+    <Property Name="bookNumber" Type="int" />
+    <Property Name="description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ItemType">
+    <Key>
+      <PropertyRef Name="itemTypeID" />
+    </Key>
+    <Property Name="itemTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="itemTypeDesc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SpoilerFilter">
+    <Key>
+      <PropertyRef Name="spoilerFilterID" />
+    </Key>
+    <Property Name="spoilerFilterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="latestBookRead" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="userPass" Type="varchar" MaxLength="50" />
+    <Property Name="userType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_ItemDescription_Item">
+    <End Role="Item" Type="readerDB01Model.Store.Item" Multiplicity="0..1" />
+    <End Role="ItemDescription" Type="readerDB01Model.Store.ItemDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="itemID" />
+      </Principal>
+      <Dependent Role="ItemDescription">
+        <PropertyRef Name="itemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

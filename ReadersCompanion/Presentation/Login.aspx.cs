@@ -26,6 +26,7 @@ public partial class Login : System.Web.UI.Page
         myUser.userName = this.UsernameBox.Text;
         myUser.userPass = this.PasswordBox.Text;
 
+
         // To be added in later weeks
         //UserMgr userManager = new UserMgr();
         //userManager.authenticate(myUser);

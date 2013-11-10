@@ -39,6 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,18 +60,126 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Business\bin\Debug\Business.dll" />
+    <Content Include="App_Code\Business\bin\Debug\Business.pdb" />
+    <Content Include="App_Code\Business\Business.csproj" />
+    <Content Include="App_Code\Business\obj\Debug\Business.csproj.FileListAbsolute.txt" />
+    <Content Include="App_Code\Business\obj\Debug\Business.dll" />
+    <Content Include="App_Code\Business\obj\Debug\Business.pdb" />
+    <Content Include="App_Code\DAL\bin\Debug\DAL.dll" />
+    <Content Include="App_Code\DAL\bin\Debug\DAL.pdb" />
+    <Content Include="App_Code\DAL\bin\Debug\EntityFramework.dll" />
+    <Content Include="App_Code\DAL\bin\Debug\EntityFramework.xml" />
+    <Content Include="App_Code\DAL\DAL.csproj" />
+    <Content Include="App_Code\DAL\obj\Debug\DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="App_Code\DAL\obj\Debug\DAL.dll" />
+    <Content Include="App_Code\DAL\obj\Debug\DAL.pdb" />
+    <Content Include="App_Code\DAL\obj\Debug\TempPE\prwModel682.cs.dll" />
+    <Content Include="App_Code\DAL\obj\Debug\TempPE\prwModel682.Designer.cs.dll" />
+    <Content Include="App_Code\Service\bin\Debug\Service.dll" />
+    <Content Include="App_Code\Service\bin\Debug\Service.pdb" />
+    <Content Include="App_Code\Service\obj\Debug\Service.csproj.FileListAbsolute.txt" />
+    <Content Include="App_Code\Service\obj\Debug\Service.dll" />
+    <Content Include="App_Code\Service\obj\Debug\Service.pdb" />
+    <Content Include="App_Code\Service\Service.csproj" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Business\Class1.cs" />
+    <Content Include="App_Code\Business\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Content Include="App_Code\Business\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Content Include="App_Code\Business\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Content Include="App_Code\Business\Properties\AssemblyInfo.cs" />
+    <Content Include="App_Code\DAL\Book.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\Item.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\ItemDescription.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\ItemType.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Content Include="App_Code\DAL\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Content Include="App_Code\DAL\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Content Include="App_Code\DAL\Properties\AssemblyInfo.cs" />
+    <Content Include="App_Code\DAL\prwModel682.Context.cs" />
+    <Content Include="App_Code\DAL\prwModel682.cs" />
+    <Content Include="App_Code\DAL\prwModel682.Designer.cs">
+      <DependentUpon>prwModel682.cs</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\Repository.cs" />
+    <Content Include="App_Code\DAL\SpoilerFilter.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\User.cs">
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\Service\Class1.cs" />
+    <Content Include="App_Code\Service\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Content Include="App_Code\Service\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Content Include="App_Code\Service\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Content Include="App_Code\Service\Properties\AssemblyInfo.cs" />
+    <Content Include="App_Code\DAL\prwModel682.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prwModel682.Context.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\prwModel6821.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prwModel682.tt</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\prwModel6821.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>prwModel682.edmx</DependentUpon>
+    </Content>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Business\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="App_Code\DAL\App.Config" />
+    <Content Include="App_Code\DAL\bin\Debug\DAL.dll.config" />
+    <Content Include="App_Code\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache" />
+    <Content Include="App_Code\DAL\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="App_Code\DAL\obj\Debug\edmxResourcesToEmbed\prwModel682.csdl" />
+    <Content Include="App_Code\DAL\obj\Debug\edmxResourcesToEmbed\prwModel682.msl" />
+    <Content Include="App_Code\DAL\obj\Debug\edmxResourcesToEmbed\prwModel682.ssdl" />
+    <Content Include="App_Code\DAL\packages.config" />
+    <Content Include="App_Code\DAL\prwModel682.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>prwModel682.Context1.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="App_Code\DAL\prwModel682.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>prwModel6821.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="App_Code\DAL\prwModel682.edmx.diagram">
+      <DependentUpon>prwModel682.edmx</DependentUpon>
+    </Content>
+    <Content Include="App_Code\DAL\prwModel682.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>prwModel6821.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Code\Service\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\Business\obj\Debug\TempPE\" />
+    <Folder Include="App_Code\DAL\bin\Release\" />
+    <Folder Include="App_Code\Service\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
