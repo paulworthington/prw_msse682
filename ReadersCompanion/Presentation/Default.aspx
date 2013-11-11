@@ -24,6 +24,9 @@
                 <li class="two">
                     <h3><asp:HyperLink ID="loginHyperLink" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></h3>
                 </li>
+                <li class="three">
+                    <h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3>
+                </li>
             </ul>
         </article>
     </div>

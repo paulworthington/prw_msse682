@@ -86,17 +86,16 @@ namespace DAL
             dataContext.SaveChanges();
         }
 
-        /*
         public virtual void Delete(T entity)
         {
-            // This doesn't help.
-            //dataContext.Set<T>().Attach(entity);
-            
-
-            dataContext.Set<T>().Remove(entity);
+           // NOPE
+           // Why does this work in Unit Tests but not in the GridView?
+            // "conflicts with restraint"? does that mean I have to delete all the related
+            // itemDescriptions and THEN delete the item?
+            dataContext.Set<T>().Remove(entity);  // same as dbCntxt.Items.Remove(deleteItem)
             dataContext.SaveChanges();
 
-            // This still doesn't work. Nothing works.
+            // NOPE
             //var entry = dataContext.Entry(entity);
             //if (entry != null)
             //{
@@ -109,7 +108,7 @@ namespace DAL
             //dataContext.Entry(entity).State = System.Data.EntityState.Deleted;
             //dataContext.SaveChanges();
         }
-         */
+        
 
         public virtual IQueryable<T> GetAll()
         {
