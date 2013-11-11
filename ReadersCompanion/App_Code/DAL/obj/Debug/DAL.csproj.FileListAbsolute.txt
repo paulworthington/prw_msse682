@@ -1,7 +1,0 @@
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\bin\Debug\DAL.dll.config
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\bin\Debug\DAL.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\bin\Debug\DAL.pdb
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\bin\Debug\EntityFramework.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\bin\Debug\EntityFramework.xml
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\obj\Debug\DAL.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\DAL\obj\Debug\DAL.pdb

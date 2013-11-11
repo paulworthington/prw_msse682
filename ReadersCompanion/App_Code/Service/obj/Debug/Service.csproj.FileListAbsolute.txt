@@ -1,4 +1,0 @@
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Service\bin\Debug\Service.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Service\bin\Debug\Service.pdb
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Service\obj\Debug\Service.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Service\obj\Debug\Service.pdb

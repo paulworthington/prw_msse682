@@ -1,4 +1,0 @@
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Business\bin\Debug\Business.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Business\bin\Debug\Business.pdb
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Business\obj\Debug\Business.dll
-C:\Users\pworthington\Source\Repos\prw_msse682\ReadersCompanion\Business\obj\Debug\Business.pdb
