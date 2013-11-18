@@ -8,7 +8,7 @@ using DAL;
 namespace DALUnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class DALUnitTest
     {
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace DALUnitTest
 
             ItemDescription myDesc = new ItemDescription();
             myDesc.bookNumber = 0;
-            myDesc.description = "The half-coin given to Grace Beckett by Brother Cy " + Convert.ToString(randomNumber);
+            myDesc.description = "The half-coin given to Grace Beckett by Brother Cy " + Convert.ToString(thingNumber);
             myDesc.itemID = myItem.itemID;
 
             dbCntxt.ItemDescriptions.Add(myDesc);
@@ -85,7 +85,7 @@ namespace DALUnitTest
             Item myItem = new Item();
             Random randomNumber = new Random();
             int thingNumber = randomNumber.Next(1, 1000);
-            myItem.itemName = "test item " + Convert.ToString(thingNumber);
+            myItem.itemName = "repo test item " + Convert.ToString(thingNumber);
             myItem.itemType = "thing";
             myItem.firstMentionBook = 0;
             myItem.firstMentionChapter = 3;
@@ -95,7 +95,7 @@ namespace DALUnitTest
 
             ItemDescription myDesc = new ItemDescription();
             myDesc.bookNumber = 0;
-            myDesc.description = "This is test item number " + Convert.ToString(thingNumber);
+            myDesc.description = "This is repo test item number " + Convert.ToString(thingNumber);
             myDesc.itemID = myItem.itemID;
 
             var itemDescriptionRepository = new GenericRepository<ItemDescription>();
@@ -106,10 +106,20 @@ namespace DALUnitTest
         [TestMethod]
         public void RepoGetAllItemsTest()
         {
-            var itemRepository = new GenericRepository<Item>();
+            GenericRepository<Item> itemRepository = new GenericRepository<Item>();
 
             List<Item> myItemList = itemRepository.GetAll().ToList<Item>();
             Assert.IsTrue(myItemList.Count > 0);
+
+            foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+
+            for (int i = 0; i < myItemList.Count; i++) // Loop through List with for
+            {
+                Console.WriteLine(myItemList[i].itemName);
+            }
         }
 
         [TestMethod]
@@ -119,7 +129,7 @@ namespace DALUnitTest
             Item myItem = new Item();
             Random randomNumber = new Random();
             int thingNumber = randomNumber.Next(1, 1000);
-            myItem.itemName = "Delete Me " + Convert.ToString(thingNumber);
+            myItem.itemName = "repo Delete Me " + Convert.ToString(thingNumber);
             myItem.itemType = "event";
             myItem.firstMentionBook = 1;
             myItem.firstMentionChapter = 18;

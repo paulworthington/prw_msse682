@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9114349F-DE5B-4312-B23C-A4506C9483BF}</ProjectGuid>
+    <ProjectGuid>{D61986F2-9D53-47CA-A813-195BA4301188}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DALUnitTest</RootNamespace>
-    <AssemblyName>DALUnitTest</AssemblyName>
+    <RootNamespace>ServiceUnitTest</RootNamespace>
+    <AssemblyName>ServiceUnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -53,17 +50,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DALUnitTest.cs" />
+    <Compile Include="ServiceUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{49569ed1-cb90-4438-b5de-25799bf525e1}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{9a9ee932-49ed-4da0-a8af-a069328b3bec}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

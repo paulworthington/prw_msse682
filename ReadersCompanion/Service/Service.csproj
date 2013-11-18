@@ -39,8 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="IItemDescriptionSvc.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="IItemSvc.cs" />
+    <Compile Include="ItemDescriptionSvcImpl.cs" />
+    <Compile Include="ItemSvcImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IUserSvc.cs" />
+    <Compile Include="UserSvcImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{49569ed1-cb90-4438-b5de-25799bf525e1}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
