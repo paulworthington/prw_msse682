@@ -56,18 +56,5 @@ public partial class Login : System.Web.UI.Page
                 //System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('" + "Please enter both name and password" + "')", true);
             }
         }
-
-
-
-
-
-        // Temporary code in order to test UI
-        //if ((myUser.userName.Equals("")) || (myUser.userPass.Equals("")))
-        //    System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('" + "Please enter name and password" + "')", true);
-        //else if ((myUser.userName.Equals("hsimpson")) && (myUser.userPass.Equals("12345678")))
-        //    System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('" + "User authenticated" + "')", true);
-        //else
-        //    System.Web.UI.ScriptManager.RegisterStartupScript(this, typeof(Page), "alert", "alert('" + "Incorrect name or password" + "')", true);
-
     }
 }

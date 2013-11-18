@@ -18,15 +18,10 @@
         <article>
             <h2>Action Menu</h2>
             <ul class="round">
-                <li class="one">
-                    <h3><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></h3>
-                </li>
-                <li class="two">
-                    <h3><asp:HyperLink ID="loginHyperLink" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></h3>
-                </li>
-                <li class="three">
-                    <h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3>
-                </li>
+                <li class="one"><h3><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></h3></li>
+                <li class="two"><h3><asp:HyperLink ID="alphaListHyperLink" runat ="server" NavigateUrl ="~/AlphaList.aspx">Browse Items Alphabetically </asp:HyperLink></h3></li>
+                <li class="three"><h3><asp:HyperLink ID="loginHyperLink" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></h3></li>
+                <li class="four"><h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3></li>
             </ul>
         </article>
     </div>
