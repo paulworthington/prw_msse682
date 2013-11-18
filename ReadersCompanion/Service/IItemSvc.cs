@@ -12,6 +12,8 @@ namespace Service
         void addItem(Item myItem);
         void deleteItem(Item myItem);
         List<Item> getAllItems();
+        IQueryable<Item> getAllItemsQueryable();
+        List<Item> getAlphaList(String alpha);
         void updateItem(Item myItem);
         Item getItem(String keyName, String keyValue);
         Item getItem(String keyName, int keyValue);

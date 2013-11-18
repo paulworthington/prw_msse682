@@ -101,6 +101,42 @@ namespace ServiceUnitTest
             }
         }
 
+        [TestMethod]
+        public void GetAllItemsQueryableServiceTest()
+        {
+            IItemSvc myItemService = new ItemSvcImpl();
+
+            IQueryable<Item> myItemList = myItemService.getAllItemsQueryable();
+
+            //foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            //{
+            //    Console.WriteLine(itemListMember.itemName);
+            //}
+
+            // query for a filtered list of items
+            // select all rows from myItemList where the itemName starts with T and order the results by itemName
+            List<Item> anotherItemList = (from rcrd in myItemList where rcrd.itemName.StartsWith("T") orderby rcrd.itemName select rcrd).ToList<Item>();
+
+            foreach (Item itemListMember in anotherItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+        }
+
+        [TestMethod]
+        public void GetAlphaListServiceTest()
+        {
+            String alpha = "T";
+            IItemSvc myItemService = new ItemSvcImpl();
+            List<Item> myItemList = myItemService.getAlphaList(alpha);
+            Assert.AreNotEqual(0, myItemList.Count<Item>());
+            foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+        }
+
+
         // get item by key from Item Service, using string name and string value
         [TestMethod]
         public void GetItemByKeyWithItemService()

@@ -65,6 +65,33 @@ namespace BusinessUnitTest
         }
 
         [TestMethod]
+        public void GetAllItemsQueryableWithMgrTest()
+        {
+            ItemMgr myItemMgr = new ItemMgr();
+
+            IQueryable<Item> myItemList = myItemMgr.GetAllAsQueryable();
+            Assert.IsTrue(myItemList.Count<Item>() > 0);
+
+            foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+        }
+
+        [TestMethod]
+        public void GetAlphaListMgrTest()
+        {
+            String alpha = "B";
+            ItemMgr myItemMgr = new ItemMgr();
+            List<Item> myItemList = myItemMgr.GetAlphaList(alpha);
+            Assert.AreNotEqual(0, myItemList.Count<Item>());
+            foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+        }
+
+        [TestMethod]
         public void GetItemByKeyWithMgrTest()
         {
             ItemMgr myItemMgr = new ItemMgr();

@@ -36,6 +36,18 @@ namespace Business
             return (List<Item>)itemService.getAllItems();
         }
 
+        public IQueryable<Item> GetAllAsQueryable()
+        {
+            IItemSvc itemService = (IItemSvc)getService("Item");
+            return itemService.getAllItemsQueryable();
+        }
+
+        public List<Item> GetAlphaList(String alpha)
+        {
+            IItemSvc itemService = (IItemSvc)getService("Item");
+            return itemService.getAlphaList(alpha);
+        }
+
         public Item GetItem(String keyName, String keyValue)
         {
             IItemSvc itemService = (IItemSvc)getService("Item");

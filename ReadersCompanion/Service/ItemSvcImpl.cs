@@ -34,6 +34,23 @@ namespace Service
             return itemRepository.GetAll().ToList<Item>();
         }
 
+        public IQueryable<Item> getAllItemsQueryable()
+        {
+            return itemRepository.GetAll();
+        }
+
+        public List<Item> getAlphaList(String alpha)
+        {
+            // get an IQueryable list of all the items
+            IQueryable<Item> myItemList = getAllItemsQueryable();
+
+            // select from myItemList according to the argument
+            List<Item> selectedItemList = (from rcrd in myItemList where rcrd.itemName.StartsWith(alpha) orderby rcrd.itemName select rcrd).ToList<Item>();
+
+            // return the selected item list
+            return selectedItemList;
+        }
+
         public void updateItem(Item myItem)
         {
             itemRepository.Update(myItem);

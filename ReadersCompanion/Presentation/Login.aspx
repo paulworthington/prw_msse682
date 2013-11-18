@@ -28,8 +28,11 @@
             </tr>
         </table>
         <br />
+        <asp:Label ID="loginLabel" runat="server" style="z-index: 1; left: 10px; top: 192px; position: absolute"></asp:Label>
+        <br />
         <br />
         <asp:Button ID ="LoginButton" runat ="server" type ="submit" Text ="Login" OnClick ="LoginButton_Click" />
+        <br />
         <br />
         <br />
         <br />
