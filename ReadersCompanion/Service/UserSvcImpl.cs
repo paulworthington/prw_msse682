@@ -7,7 +7,7 @@ using DAL;
 
 namespace Service
 {
-    class UserSvcImpl : IUserSvc
+    public class UserSvcImpl : IUserSvc
     {
         // class data members
         public GenericRepository<User> userRepository;

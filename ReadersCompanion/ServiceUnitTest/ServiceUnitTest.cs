@@ -81,6 +81,26 @@ namespace ServiceUnitTest
             myItemService.deleteItem(targetItem);
         }
 
+        // use service to get all items from the database
+        [TestMethod]
+        public void GetAllItemsWithServiceTest()
+        {
+            IItemSvc myItemService = new ItemSvcImpl();
+
+            List<Item> myItemList = myItemService.getAllItems();
+            Assert.IsTrue(myItemList.Count > 0);
+
+            foreach (Item itemListMember in myItemList) // Loop through List with foreach
+            {
+                Console.WriteLine(itemListMember.itemName);
+            }
+
+            for (int i = 0; i < myItemList.Count; i++) // Loop through List with for
+            {
+                Console.WriteLine(myItemList[i].itemName);
+            }
+        }
+
         // get item by key from Item Service, using string name and string value
         [TestMethod]
         public void GetItemByKeyWithItemService()
