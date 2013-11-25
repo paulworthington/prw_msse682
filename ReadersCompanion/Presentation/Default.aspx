@@ -15,13 +15,30 @@
             one novel or a series of related novels. It’s a sort of encyclopedia that readers<br />
             can use to gain a deeper understanding of a body of work.
         </p>
+        <p>
+            <asp:LoginView ID="LoginView1" runat="server">
+                <AnonymousTemplate>
+                    Please click the Login link to sign in and access personalized content.
+                </AnonymousTemplate>
+                <LoggedInTemplate>
+                    <h3>Welcome, <asp:LoginName ID="LoginName1" runat="server" /></h3>
+                </LoggedInTemplate>
+            </asp:LoginView>
+        </p>
+
         <article>
+            <p><br /><br /></p>
             <h2>Action Menu</h2>
+            <p>
+                <br />
+                <br />
+            </p>
             <ul class="round">
-                <li class="one"><h3><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></h3></li>
-                <li class="two"><h3><asp:HyperLink ID="alphaListHyperLink" runat ="server" NavigateUrl ="~/AlphaList.aspx">Browse Items Alphabetically </asp:HyperLink></h3></li>
-                <li class="three"><h3><asp:HyperLink ID="loginHyperLink" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></h3></li>
-                <li class="four"><h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3></li>
+                <li class="one"><h3><asp:LoginStatus ID="LoginStatus2" runat="server" /></h3></li>
+                <li class="two"><h3><asp:HyperLink ID="adminHyperLink" runat="server" NavigateUrl="~/Restricted/Admin.aspx">Admin page for editors</asp:HyperLink></h3></li>
+                <li class="three"><h3><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></h3></li>
+                <li class="four"><h3><asp:HyperLink ID="alphaListHyperLink" runat ="server" NavigateUrl ="~/AlphaList.aspx">Browse Items Alphabetically </asp:HyperLink></h3></li>
+                <li class="five"><h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3></li>
             </ul>
         </article>
     </div>
