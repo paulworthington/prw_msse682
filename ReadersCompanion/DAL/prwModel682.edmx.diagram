@@ -4,24 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f6ea7b2ad4f4637b7730eaaf3e2f0e2" Name="Diagram1" ZoomLevel="22">
-        <EntityTypeShape EntityType="readerDB01Model.Book" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="readerDB01Model.Item" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="readerDB01Model.ItemDescription" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="readerDB01Model.ItemType" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="readerDB01Model.SpoilerFilter" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="readerDB01Model.User" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="0f6ea7b2ad4f4637b7730eaaf3e2f0e2" Name="Diagram1" ZoomLevel="39">
+        <EntityTypeShape EntityType="readerDB01Model.Book" Width="1.5" PointX="1.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="readerDB01Model.Item" Width="1.5" PointX="1.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="readerDB01Model.ItemDescription" Width="1.5" PointX="4" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="readerDB01Model.ItemType" Width="1.5" PointX="4" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="readerDB01Model.SpoilerFilter" Width="1.5" PointX="6.375" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="readerDB01Model.User" Width="1.5" PointX="6.375" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="readerDB01Model.FK_ItemDescription_Item" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Applications" Width="1.5" PointX="10.320059648864" PointY="3.0377433016140682" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Membership" Width="1.5" PointX="10.185336324472603" PointY="12.592012321852153" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Paths" Width="1.5" PointX="2.4098860055254243" PointY="16.215828783910641" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_PersonalizationAllUsers" Width="1.5" PointX="7.2766322918593094" PointY="1.7068192370733335" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_PersonalizationPerUser" Width="1.5" PointX="2.2654977153360365" PointY="27.88191818999216" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Profile" Width="1.5" PointX="7.4896309131242482" PointY="19.994460159910126" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Roles" Width="1.5" PointX="3.3135937654010923" PointY="9.7804011599069458" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_SchemaVersions" Width="1.5" PointX="4.4972405119320564" PointY="6.4070141643318417" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_Users" Width="1.5" PointX="8.3079194521102675" PointY="18.25486528233386" />
-        <EntityTypeShape EntityType="readerDB01Model.aspnet_WebEvent_Events" Width="1.5" PointX="3.1608917057332073" PointY="15.890770070203939" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Applications" Width="1.5" PointX="8.75" PointY="8" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Membership" Width="1.5" PointX="10.875" PointY="9.125" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Paths" Width="1.5" PointX="3.875" PointY="8.125" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_PersonalizationAllUsers" Width="1.5" PointX="6.375" PointY="6.125" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_PersonalizationPerUser" Width="1.5" PointX="3.875" PointY="11.75" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Profile" Width="1.5" PointX="6.25" PointY="12.875" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Roles" Width="1.5" PointX="6.25" PointY="9.75" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_SchemaVersions" Width="1.5" PointX="1.75" PointY="6" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_Users" Width="1.5" PointX="8.625" PointY="11.625" />
+        <EntityTypeShape EntityType="readerDB01Model.aspnet_WebEvent_Events" Width="1.5" PointX="1.75" PointY="8.125" />
         <AssociationConnector Association="readerDB01Model.FK__aspnet_Me__Appli__3A81B327" />
         <AssociationConnector Association="readerDB01Model.FK__aspnet_Pa__Appli__6C190EBB" />
         <AssociationConnector Association="readerDB01Model.FK__aspnet_Ro__Appli__59063A47" />
