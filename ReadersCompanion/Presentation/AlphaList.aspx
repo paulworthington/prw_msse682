@@ -82,8 +82,8 @@
         <h3>Navigation</h3>
         <ul>
             <li><asp:HyperLink ID="mainHyperLink" runat="server" NavigateUrl="~/Default.aspx">Back To Main</asp:HyperLink></li>
+            <li><asp:LoginStatus ID="LoginStatus2" runat="server" /></li>
             <li><asp:HyperLink ID ="itemGridHyperLink" runat ="server" NavigateUrl ="~/ItemGrid.aspx">List All Items </asp:HyperLink></li>
-            <li><asp:HyperLink ID="loginHyperLink" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink></li>
             <li><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></li>
         </ul>
     </aside>
