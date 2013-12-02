@@ -25,6 +25,25 @@ namespace AuthenticationServer
             _socket = socket;
         }
 
+        public Boolean authenticateUser(String username, String password)
+        {
+            Boolean authenticated = false;
+            try
+            {
+                // *************************************************************************
+                // this doesn't work right now - I think it's not connecting to the database
+                // but I don't know why - I've got the right connection string and
+                // other app.config settings (so far as I know). This SHOULD be working!
+                authenticated = System.Web.Security.Membership.ValidateUser(username, password);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("PRW: SocketException: {0}", e);
+            }
+
+            return authenticated;
+        }
+
         public void run()
         {
             // 1. get a stream to read/write
@@ -71,25 +90,6 @@ namespace AuthenticationServer
 
     public class Listener
     {
-        public Boolean authenticateUser(String username, String password)
-        {
-            Boolean authenticated = false;
-            try
-            {
-                // *************************************************************************
-                // this doesn't work right now - I think it's not connecting to the database
-                // but I don't know why - I've got the right connection string and
-                // other app.config settings (so far as I know). This SHOULD be working!
-                authenticated = System.Web.Security.Membership.ValidateUser(username, password);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("PRW: SocketException: {0}", e);
-            }
-
-            return authenticated;
-        }
-
         public void Listen()
         {
             TcpListener listener= null;
