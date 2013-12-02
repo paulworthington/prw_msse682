@@ -45,7 +45,7 @@ namespace Business
         public Boolean authenticate(User user)
         {
             IUserSvc userService = (IUserSvc)getService("User");
-            return userService.authenticate(user);
+            return userService.authenticateUser(user);
         }
 
     }

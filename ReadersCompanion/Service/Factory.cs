@@ -31,6 +31,9 @@ namespace Service
                 case "User":
                     serviceInstance = (IService)new UserSvcImpl();
                     break;
+                case "Authentication":
+                    serviceInstance = (IService)new AuthenticationSvcSocketImpl();
+                    break;
                 default:
                     throw new System.ArgumentException("Unimplemented Service type: " + serviceName);
             }

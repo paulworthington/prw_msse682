@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenticationSvcSocketImpl.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="IAuthenticationSvc.cs" />
     <Compile Include="IItemDescriptionSvc.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="IItemSvc.cs" />
@@ -50,6 +52,10 @@
     <Compile Include="UserSvcImpl.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AuthenticationServer\AuthenticationServer.csproj">
+      <Project>{f938f565-dc99-4b53-98c9-ef1545000e4a}</Project>
+      <Name>AuthenticationServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{49569ed1-cb90-4438-b5de-25799bf525e1}</Project>
       <Name>DAL</Name>

@@ -170,5 +170,30 @@ namespace BusinessUnitTest
             isValid = myUserMgr.authenticate(myUser);
             Assert.IsTrue(isValid);
         }
+
+        // authenticate user using AuthenticationMgr
+        [TestMethod]
+        public void AuthenticateWithAuthMgrTest()
+        {
+            // NOTE: YOU MUST START THE AUTHENTICATION SERVER INDEPENDENTLY FIRST
+
+            AuthenticationMgr myAuthMgr = new AuthenticationMgr();
+            String USERNAME = "hsimpson";
+            String PASSWORD = "12345678++";
+            Boolean result = false;
+
+            try
+            {
+                Console.WriteLine("Result before, should be false: " + result);
+                result = myAuthMgr.authenticateUser(USERNAME, PASSWORD);
+                Console.WriteLine("Result after, should be true: " + result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("PRW: Socket Communication Exception from test. Message: " + e.Message);
+            }
+
+            Assert.IsTrue(result);
+        }
     }
 }

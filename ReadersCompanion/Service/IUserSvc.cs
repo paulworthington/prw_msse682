@@ -15,7 +15,7 @@ namespace Service
         void updateUser(User myUser);
         User getUser(String keyName, String keyValue);
         User getUser(String keyName, int keyValue);
-        Boolean authenticate(User myUser);
+        Boolean authenticateUser(User myUser);
     }
 }
 

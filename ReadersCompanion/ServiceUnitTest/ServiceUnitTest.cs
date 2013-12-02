@@ -2,6 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using AuthenticationServer;
 using DAL;
 using Service;
 
@@ -233,7 +237,7 @@ namespace ServiceUnitTest
             myUser.userType = "0";
 
             Boolean isValid = true;
-            isValid = myUserService.authenticate(myUser);
+            isValid = myUserService.authenticateUser(myUser);
 
             Assert.IsFalse(isValid);
         }
@@ -257,9 +261,35 @@ namespace ServiceUnitTest
             myUser.userType = "0";
 
             Boolean isValid = false;
-            isValid = myUserService.authenticate(myUser);
+            isValid = myUserService.authenticateUser(myUser);
 
             Assert.IsTrue(isValid);
+        }
+
+        // authenticate user using AuthenticationSvc
+        [TestMethod]
+        public void AuthenticateWithAuthSvcTest()
+        {
+            // NOTE: YOU MUST START THE AUTHENTICATION SERVER INDEPENDENTLY FIRST
+
+            String USERNAME = "hsimpson";
+            String PASSWORD = "12345678++";
+            Boolean result = false;
+
+            IAuthenticationSvc AuthSvc = new AuthenticationSvcSocketImpl();
+
+            try
+            {
+                Console.WriteLine("Result before, should be false: " + result);
+                result = AuthSvc.authenticateUser(USERNAME, PASSWORD);
+                Console.WriteLine("Result after, should be true: " + result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("PRW: Socket Communication Exception from test. Message: " + e.Message);
+            }
+
+            Assert.IsTrue(result);
         }
     }
 }

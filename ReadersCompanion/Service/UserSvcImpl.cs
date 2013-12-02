@@ -49,7 +49,7 @@ namespace Service
             return userRepository.GetByKey(keyName, keyValue).FirstOrDefault<User>();
         }
 
-        public Boolean authenticate(User myUser)
+        public Boolean authenticateUser(User myUser)
         {
             Boolean authenticated = false;
             String searchName = "userName";
