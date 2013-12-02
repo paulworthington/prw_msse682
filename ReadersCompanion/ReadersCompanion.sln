@@ -37,6 +37,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{83E3BF5D-BB58-43CC-8763-B4F6EE134A4B}"
 	ProjectSection(SolutionItems) = preProject
 		createdatabase.sql = createdatabase.sql
+		createMembershipdatabase.sql = createMembershipdatabase.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceUnitTest", "ServiceUnitTest\ServiceUnitTest.csproj", "{D61986F2-9D53-47CA-A813-195BA4301188}"
