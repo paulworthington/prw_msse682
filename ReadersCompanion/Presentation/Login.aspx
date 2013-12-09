@@ -12,6 +12,9 @@
 
         <h1> Login </h1>
         <h2> - login to access personalized features </h2>
+        <strong>Note:</strong> this form an asp:Login web control to authenticate using the .NET membership API.
+        <br />
+        <br />
 
     <article>
 

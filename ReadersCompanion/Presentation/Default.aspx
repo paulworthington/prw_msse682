@@ -34,11 +34,21 @@
                 <br />
             </p>
             <ul class="round">
-                <li class="one"><h3><asp:LoginStatus ID="LoginStatus2" runat="server" /></h3></li>
-                <li class="two"><h3><asp:HyperLink ID="adminHyperLink" runat="server" NavigateUrl="~/Restricted/Admin.aspx">Admin page for editors</asp:HyperLink></h3></li>
-                <li class="three"><h3><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></h3></li>
-                <li class="four"><h3><asp:HyperLink ID="alphaListHyperLink" runat ="server" NavigateUrl ="~/AlphaList.aspx">Browse Items Alphabetically </asp:HyperLink></h3></li>
-                <li class="five"><h3><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></h3></li>
+                <li class="one"><strong><asp:LoginStatus ID="LoginStatus2" runat="server" /></strong><br />
+                    - authenticate using asp:Login web control and direct .NET membership
+                </li>
+                <li class="one"><strong><asp:HyperLink ID="socketLoginHyperLink" runat="server" NavigateUrl="~/SocketLogin.aspx">Socket Login</asp:HyperLink></strong><br />
+                    - authenticate using external socket-based authentication server that uses .NET membership<br />
+                </li>
+                <li class="one"><strong><asp:HyperLink ID="wcfLoginHyperLink" runat="server" NavigateUrl="~/WcfLogin.aspx">WCF Login</asp:HyperLink></strong><br />
+                    - authenticate using external WCF-based authentication service that defaults to true<br />
+                </li>
+                <li class="two"><strong><asp:HyperLink ID="adminHyperLink" runat="server" NavigateUrl="~/Restricted/Admin.aspx">Admin page for editors</asp:HyperLink></strong><br />
+                    - use this after using Login.aspx
+                </li>
+                <li class="three"><strong><asp:HyperLink ID="itemGridHyperLink" runat="server" NavigateUrl="~/ItemGrid.aspx">List All Items</asp:HyperLink></strong></li>
+                <li class="four"><strong><asp:HyperLink ID="alphaListHyperLink" runat ="server" NavigateUrl ="~/AlphaList.aspx">Browse Items Alphabetically </asp:HyperLink></strong></li>
+                <li class="five"><strong><asp:HyperLink ID ="spoilerFilterHyperLink" runat ="server" NavigateUrl ="~/SetSpoilerFilter.aspx">Set Spoiler Filter </asp:HyperLink></strong></li>
             </ul>
         </article>
     </div>

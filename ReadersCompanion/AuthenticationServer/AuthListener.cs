@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Web;
 using System.Web.Security;
 using DAL;
 
@@ -30,11 +31,8 @@ namespace AuthenticationServer
             Boolean authenticated = false;
             try
             {
-                // *************************************************************************
-                // this doesn't work right now - I think it's not connecting to the database
-                // but I don't know why - I've got the right connection string and
-                // other app.config settings (so far as I know). This SHOULD be working!
-                authenticated = System.Web.Security.Membership.ValidateUser(username, password);
+                // authenticate using the .NET membership API
+                authenticated = Membership.ValidateUser(username, password);
             }
             catch (Exception e)
             {
@@ -57,30 +55,8 @@ namespace AuthenticationServer
             Console.WriteLine();
             Console.WriteLine("Username: " + username + " Password: " + password);
 
-            // **************************************************************************
-            // I'd like to read/write a User object, but ...
-            // For some reason, the AuthenticationServer fails to launch if I switch to
-            // reading and writing a User object. (See below.)
-
-            // 2. get the object using a BinaryFormatter
-            //BinaryFormatter bf = new BinaryFormatter();
-            //bf.AssemblyFormat = FormatterAssemblyStyle.Simple;
-            //object o = bf.Deserialize(stream);
-            //User user = o as User;
-            //Console.WriteLine();
-            //Console.WriteLine("Username: " + user.userName + " Password: " + user.userPass);
-            //BinaryWriter writer = new BinaryWriter(stream);
-            // ***************************************************************************
-
-            // ***************************************************************************
             // 3. process the credentials and return a true/false
-            // NOTE: commenting this out until I find out why authenticateUser() isn't working
-            //authenticated = authenticateUser(username, password);
-            // ***************************************************************************
-
-            // 3. process the credentials and return a true/false
-            // NOTE: hard-coded for now to demonstrate the usage of sockets and threads
-            authenticated = true;
+            authenticated = authenticateUser(username, password);
             writer.Write(authenticated);
 
             // 4. close the socket

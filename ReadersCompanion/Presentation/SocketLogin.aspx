@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UserLogin.aspx.cs" Inherits="UserLogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SocketLogin.aspx.cs" Inherits="UserLogin" %>
 
 <!DOCTYPE html>
 
@@ -10,11 +10,12 @@
     <form id="form1" runat="server">
     <div>
 
-
-        
-
         <h1> Login </h1>
         <h2> - login to access personalized features </h2>
+        <strong>Note:</strong> this form relies on an external socket-based authentication server<br />
+        to authenticate using the .NET membership API.
+        <br />
+        <br />
 
     <article>
         <table>
@@ -28,7 +29,7 @@
             </tr>
         </table>
         <br />
-        <asp:Label ID="loginLabel" runat="server" style="z-index: 1; left: 10px; top: 192px; position: absolute"></asp:Label>
+        <asp:Label ID="loginLabel" runat="server" style="z-index: 1; left: 10px;"></asp:Label>
         <br />
         <br />
         <asp:Button ID ="LoginButton" runat ="server" type ="submit" Text ="Login" OnClick ="LoginButton_Click" />
