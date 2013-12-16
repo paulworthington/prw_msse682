@@ -195,5 +195,30 @@ namespace BusinessUnitTest
 
             Assert.IsTrue(result);
         }
+
+        // authenticate user using AuthenticationWSMgr
+        [TestMethod]
+        public void AuthenticateWithAuthWSMgrTest()
+        {
+            // NOTE: THE ASP.NET DEVELOPMENT SERVER MUST BE UP AND RUNNING FIRST
+
+            AuthenticationWSMgr myAuthWSMgr = new AuthenticationWSMgr();
+            String USERNAME = "hsimpson";
+            String PASSWORD = "12345678++";
+            Boolean result = false;
+
+            try
+            {
+                //Console.WriteLine("Result before, should be false: " + result);
+                result = myAuthWSMgr.authenticateUser(USERNAME, PASSWORD);
+                //Console.WriteLine("Result after, should be true: " + result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("PRW: Web Service Communication Exception from test. Message: " + e.Message);
+            }
+
+            Assert.IsTrue(result);
+        }
     }
 }

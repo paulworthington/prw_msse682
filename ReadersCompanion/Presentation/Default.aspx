@@ -43,6 +43,9 @@
                 <li class="one"><strong><asp:HyperLink ID="wcfLoginHyperLink" runat="server" NavigateUrl="~/WcfLogin.aspx">WCF Login</asp:HyperLink></strong><br />
                     - authenticate using external WCF-based authentication service that defaults to true<br />
                 </li>
+                <li class="one"><strong><asp:HyperLink ID="webServiceLoginHyperLink" runat="server" NavigateUrl="~/WebServiceLogin.aspx">Web Service Login</asp:HyperLink></strong><br />
+                    - authenticate using external Web Service authentication service that defaults to true<br />
+                </li>
                 <li class="two"><strong><asp:HyperLink ID="adminHyperLink" runat="server" NavigateUrl="~/Restricted/Admin.aspx">Admin page for editors</asp:HyperLink></strong><br />
                     - use this after using Login.aspx
                 </li>
